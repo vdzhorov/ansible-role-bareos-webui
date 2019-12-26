@@ -1,0 +1,21 @@
+---
+
+- name: Install Bareos WebUI package
+  yum:
+    name: bareos-webui
+    state: installed
+
+- name: Configure basic WebUI authetication (Webui)
+  template:
+    src: "admin.conf.j2"
+    dest: "/etc/bareos/bareos-dir.d/console/admin.conf"
+  notify:
+    - "Restart bareos-dir"
+    - "Restart bareos-fd"
+    - "Restart bareos-sd"
+    - "Restart httpd"
+
+- name: Configure WebUI directors (Webui)
+  template:
+    src: "directors.ini.j2"
+    dest: "/etc/bareos-webui/directors.ini"
