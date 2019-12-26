@@ -1,0 +1,4 @@
+---
+
+bareos_location: "/etc/bareos"
+bareos_webui_location: "/etc/bareos-webui"
