@@ -1,5 +1,10 @@
 ---
 
+- name: Restart bareos-sd
+  service:
+    name: bareos-sd
+    state: restarted
+
 - name: Restart httpd
   service:
     name: httpd
