@@ -8,7 +8,7 @@
 - name: Configure basic WebUI authetication (Webui)
   template:
     src: "admin.conf.j2"
-    dest: "{{ bareos_location }}/bareos-dir.d/console/admin.conf"
+    dest: "{{ bareos_root_dir }}/bareos-dir.d/console/admin.conf"
   notify:
     - "Restart bareos-dir"
     - "Restart bareos-fd"
