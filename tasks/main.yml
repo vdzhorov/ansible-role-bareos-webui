@@ -10,10 +10,10 @@
     src: "admin.conf.j2"
     dest: "{{ bareos_root_dir }}/bareos-dir.d/console/admin.conf"
   notify:
-    - "Restart bareos-dir"
-    - "Restart bareos-fd"
-    - "Restart bareos-sd"
-    - "Restart httpd"
+    - "restart bareos-dir"
+    - "restart bareos-fd"
+    - "restart bareos-sd"
+    - "restart httpd"
 
 - name: Configure WebUI directors (Webui)
   template:
