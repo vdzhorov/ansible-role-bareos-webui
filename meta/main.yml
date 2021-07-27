@@ -1,7 +1,7 @@
 ---
 
 dependencies:
-  - vdzhorov.bareos_base
+  - vdzhorov.ansible_role_bareos_base
 
 galaxy_info:
   role_name: bareos_webui
